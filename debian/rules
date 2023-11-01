@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 %:
 	dh $@
+
+override_dh_clean:
+	rm -rf build
+	find po -mindepth 1 -maxdepth 1 -type d | xargs --no-run-if-empty rm -rf
+	dh_clean
+
+override_dh_auto_test:
+	xvfb-run dh_auto_test

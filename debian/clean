@@ -1,0 +1,3 @@
+config.h
+data/cherrytree.1.gz
+src/ct/icons.gresource.cc

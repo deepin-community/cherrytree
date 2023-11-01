@@ -1,0 +1,6 @@
+Package contains embedded sources of spdlog, fmt and 7za. Although these
+sources are already packaged in Debian, drop-in replacement results in
+failure to build from source, most likely due to incompatible versions
+and/or local modifications.
+
+ -- Andrius Merkys <merkys@debian.org>  Wed, 21 Oct 2020 05:13:08 +0000
