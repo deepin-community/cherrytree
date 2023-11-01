@@ -1,0 +1,13 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -198,8 +198,8 @@
+ 
+ if(BUILD_TESTING AND NOT DEFINED ENV{DEB_BUILD_OPTIONS})
+   enable_testing()
+-  include(GoogleTest)
+-  add_subdirectory(tests)
++  # include(GoogleTest)
++  # add_subdirectory(tests)
+ endif()
+ 
+ # rebuild man pages

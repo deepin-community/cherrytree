@@ -1,0 +1,7 @@
+#!/bin/sh
+# postinst script for cherrytree
+set -e
+
+(update-desktop-database || true &)
+
+#DEBHELPER#
